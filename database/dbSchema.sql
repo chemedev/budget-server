@@ -5,14 +5,14 @@ CREATE TABLE users (
   name VARCHAR,
   "createdAt" TIMESTAMP NOT NULL,
   "updatedAt" TIMESTAMP NOT NULL,
-  "deletedAt" TIMESTAMP NOT NULL
+  "deletedAt" TIMESTAMP
 );
 CREATE TABLE categories (
   id serial PRIMARY KEY,
   name VARCHAR NOT NULL,
   "createdAt" TIMESTAMP NOT NULL,
   "updatedAt" TIMESTAMP NOT NULL,
-  "deletedAt" TIMESTAMP NOT NULL
+  "deletedAt" TIMESTAMP
 );
 CREATE TABLE expenses (
   id serial PRIMARY KEY,
@@ -24,7 +24,7 @@ CREATE TABLE expenses (
   "categoryId" INT NOT NULL,
   "createdAt" TIMESTAMP NOT NULL,
   "updatedAt" TIMESTAMP NOT NULL,
-  "deletedAt" TIMESTAMP NOT NULL,
+  "deletedAt" TIMESTAMP,
   FOREIGN KEY ("userId") REFERENCES users(id),
   FOREIGN KEY ("categoryId") REFERENCES categories(id)
-)
+);

@@ -33,3 +33,6 @@ db.authenticate()
 
 //? routes
 app.get('/', (_req, res) => res.send('Home'))
+app.use('/expense', require('./routes/Expense'))
+app.use('/user', require('./routes/User'))
+app.use('/category', require('./routes/Category'))

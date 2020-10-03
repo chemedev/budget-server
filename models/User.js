@@ -23,10 +23,7 @@ const User = db.define(
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
-      validate: {
-        isAlpha: true
-      }
+      type: DataTypes.STRING
     }
   },
   {
