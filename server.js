@@ -23,7 +23,7 @@ app.use((err, _req, res, next) => {
 })
 
 //? database connection
-const db = require('./config/database')
+const db = require('./database')
 db.authenticate()
   .then(() => console.log('DB connected.'))
   .then(() =>
@@ -31,5 +31,5 @@ db.authenticate()
   )
   .catch(error => console.log(error.message))
 
-//Routes routes
-app.get('/', (_req, res) => res.send('INDEX'))
+//? routes
+app.get('/', (_req, res) => res.send('Home'))
