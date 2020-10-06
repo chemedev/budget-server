@@ -12,10 +12,7 @@ const Category = db.define(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: true,
-      validate: {
-        isAlpha: true
-      }
+      allowNull: true
     }
   },
   {
