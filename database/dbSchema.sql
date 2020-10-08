@@ -28,3 +28,17 @@ CREATE TABLE expenses (
   FOREIGN KEY ("userId") REFERENCES users(id),
   FOREIGN KEY ("categoryId") REFERENCES categories(id)
 );
+INSERT INTO categories (name, "createdAt", "updatedAt")
+VALUES ('Varios', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+  ('Medicina', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+  (
+    'Supermercado',
+    CURRENT_TIMESTAMP,
+    CURRENT_TIMESTAMP
+  ),
+  (
+    'Servicios',
+    CURRENT_TIMESTAMP,
+    CURRENT_TIMESTAMP
+  ),
+  ('Shopping', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
